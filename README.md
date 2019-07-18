@@ -26,3 +26,7 @@ _chrome://inspect_
 *```git push origin master```*
 3. push/deploy to Heroku:<br>
 *```git push heroku master```*
+
+<h2>Heroku</h2>
+
+*```https://nkushnir-weather-application.herokuapp.com/```*
