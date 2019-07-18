@@ -17,7 +17,7 @@ const forecastByCoordinates = (data, callback) => {
     const {latitude, longitude} = data;
 
     const url = `https://api.darksky.net/forecast/dde8e21af8b3354c01a4533b4be25d22/${latitude},${longitude}`;
-    const params = '?exclude=minutely,hourly&lang=en&units=si'
+    const params = '?exclude=minutely,hourly&lang=en&units=si';
 
     const options = {
         url: url + params,
@@ -33,6 +33,8 @@ const forecastByCoordinates = (data, callback) => {
             data.temperature = response.body.currently.temperature;
             data.precipProbability = response.body.currently.precipProbability;
             data.summary = response.body.daily.data[0].summary;
+            data.temperatureMin = response.body.daily.data[0].temperatureMin;
+            data.temperatureMax = response.body.daily.data[0].temperatureMax;
             callback(error, data);
         }
     });

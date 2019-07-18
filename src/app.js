@@ -55,7 +55,7 @@ app.get('/weather', (req, res) => {
         });
     }
 
-    forecast.forecast(req.query.address, (error, {temperature, precipProbability, location, summary} = {}) => {
+    forecast.forecast(req.query.address, (error, {temperature, temperatureMin, temperatureMax, precipProbability, location, summary} = {}) => {
         if (error) {
             console.log(error);
             return res.send({error});
@@ -63,6 +63,8 @@ app.get('/weather', (req, res) => {
             return res.send({
                 location,
                 temperature,
+                temperatureMin,
+                temperatureMax,
                 precipProbability,
                 summary
             });
