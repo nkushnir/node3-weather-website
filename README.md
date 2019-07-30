@@ -1,8 +1,8 @@
 <h1>Weather Application</h1>
 
 <h2>Run command</h2>
-_```npm run start```_ (see package.json -> scripts)
-
+_```npm run start```_   (see package.json -> scripts)<br>
+_```npm run dev```_     (see package.json -> scripts)<br>
 or<br>
 _```node src/app.js```_
 
@@ -30,3 +30,4 @@ _chrome://inspect_
 <h2>Heroku</h2>
 
 *```https://nkushnir-weather-application.herokuapp.com/```*
+*```curl https://nkushnir-weather-application.herokuapp.com/weather?address=Lviv```*
